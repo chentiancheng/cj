@@ -26,18 +26,18 @@ html,body{
 .container .header_left{
     width: 3rem;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
 }
 .container .header_left img{
-    float: left;
-    width: 0.5rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    margin-top: 0.05rem;
+    width: 0.6rem;
+    height: 0.8rem;
+    display: block;
 }
 .container .close{
-    float: left;
-    font-size: 0.4rem;
-    margin-top: 0.07rem;
+    font-size: 0.44rem;
 }
 .container header h3{
     flex: 1;
@@ -52,7 +52,7 @@ html,body{
     display: block;
     width: 3rem;
     text-align: center;
-    font-size: 0.4rem;
+    font-size: 0.44rem;
 }
 /*内容*/
 section{
@@ -73,16 +73,17 @@ section{
     top: 0;
 }
 .grab{
-    width: 8.5rem;
+    width: 9rem;
+    height: 25%;
     position: absolute;
     left: 5rem;
-    bottom:8rem;
+    bottom:22%;
 }
 .free{
     position: absolute;
-    left: 9rem;
-    bottom: 7rem;
-    margin-left: -3rem;
+    bottom: 17%;
+    width: 100%;
+    text-align: center;
     color: #9c2c27;
     font-size: 0.35rem;
 }
