@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>领红包</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+<div class="container">
+    <!-- 首页 -->
+    <header>
+        <div class="header_left">
+            <img src="images/back.png" alt="">
+            <span class="close">关闭</span>
+        </div>
+        <h3>您的红包即将过期,快来领取</h3>
+        <span class="bookshelf">书架</span>
+    </header>
+    <section>
+        <img src="images/left-rule.png" alt="" class="left_rule rule-btn">
+        <img src="images/right-rule.png" alt="" class="right_rule rule-btn">
+        <img id="rob-btn" src="images/btn.png" alt="" class="grab">
+        <p class="free">今日免费次数:<span id="free-num" class="free_num">0</span>次</p>
+        <ul id="packet">
+            <li data-id="1" data-item="150"><img src="images/150-2.png" alt=""></li>
+            <li data-id="2" data-item="100"><img src="images/100-2.png" alt=""></li>
+            <li data-id="3" data-item="50"><img src="images/50-2.png" alt=""></li>
+            <li data-id="4" data-item="1000"><img src="images/lucky-2.png" alt=""></li>
+        </ul>
+    </section>
+    <!--活动说明-->
+    <div class="activity" id="win-activity">
+    <!--主体-->
+    <div class="activity_main">
+    <!--标签-->
+    <div class="activity_title">
+    <img src="images/ellipse.png" alt="" class="activity_l_img">
+    <h4>活动说明</h4>
+    <img src="images/ellipse.png" alt="" class="activity_r_img">
+    </div>
+    <img src="images/close1.png" alt="" class="activity_close" id="activity_close">
+    <!--内容 -->
+    <div class="activity_content">
+    <p class="activity_text">活动说明:参与活动既有机会获得幸运奖~每天限参与7次,7次机会免费.此活动为概率中奖,奖品数量有限,祝你好运!</p>
+    <p class="prize">惊喜一:<span>200元红包</span></p>
+    <p class="prize">惊喜二:<span>150元红包</span></p>
+    <p class="prize">惊喜三:<span>100元红包</span></p>
+    <p class="prize">惊喜四:<span>50元红包</span></p>
+    <p class="prize">惊喜五:<span>幸运红包</span></p>
+    <p class="prize">惊喜六:<span>惊喜红包</span></p>
+    <ul>
+    <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+    <h4 class="important">重要说明:</h4>
+    <p class="notice">实物类奖品将在活动结束后5-10个工作日安排发货,请耐心等待!</p>
+    </div>
+    </div>
+    </div>
+    <!--中奖结果-->
+    <div id="win-result" class="result hide">
+        <div class="result_main">
+            <a href="" class="aa"><img src="images/timg.jpg" alt="" class="change"></a>
+            <img src="images/reward.png" alt="" class="reward">
+            <img src="images/receive.png" alt="" class="receive">
+            <img id="result_close" src="images/close2.png" alt="" class="result_close">
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/luckdraw.js"></script>
+<script>    
+    var luckDraw=new luckDraw();
+    luckDraw.init(function(item){
+        console.log(item);
+    });
+    var obj=document.getElementById('rob-btn')
+    obj.onclick=function(){
+        if($(this).attr('src')=="images/btn.png"){
+            $(this).attr('src',"images/press.png")
+        }else{
+            $(this).attr('src',"images/btn.png")
+        }
+    }
+</script>
+</body>
+</html>
